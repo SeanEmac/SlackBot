@@ -1,5 +1,6 @@
 from github import Github
-g = Github("864faa783c3943a73ab37f17547a6d70329130f9")
+import os
+g = Github(os.environ.get('GITHUB_TOKEN'))
 
 def get_repos():
     response = []
